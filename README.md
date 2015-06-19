@@ -1,6 +1,6 @@
 Final version of the R files for the Shiny app and for the Rpres presentation.
 
-You can find the published slides at http://rpubs.com/icgordon/87041 and the shiny app at
+You can find the published slides at http://rpubs.com/icgordon/87068 and the shiny app at
 http://icgordon.shinyapps.io/DataProducts
 
 There may be some display problems with IE on lower resolution monitors. In testing, I have
