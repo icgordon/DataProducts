@@ -57,7 +57,7 @@ left: 30%
 
 ***
 To run the simulation,
-follow this [link](https://icgordon.shinyapps.io/DataProducts) and enter
+follow this [link](http://icgordon.shinyapps.io/DataProducts) and enter
 the values for IQ, sample size, and the number of runs.
 
 As we are dealing with random numbers, you can increase the number
