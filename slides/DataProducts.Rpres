@@ -1,0 +1,68 @@
+How Unique is Sheldon Cooper? Monte Carlo Simulation and IQ Scores
+========================================================
+author: Ian Gordon
+date: `r Sys.Date()`
+transition: rotate
+
+Introduction
+========================================================
+left: 35%
+![image1](SheldonCooper.jpg)
+![chart](IQ-Bell-Curve.png)
+
+***
+Fans of the television show *The Big Bang Theory* know that
+Sheldon Cooper is, well, unique. For one thing, he claims to
+have an IQ of 187. After years spent watching Sheldon Cooper,
+I began to wonder just how unique his IQ actually is. How many
+Sheldon Coopers might there be in the world?
+
+
+Discussion
+========================================================
+
+IQ scores follow a normal (or Gaussian) distribution, with a mean
+of 100 and a standard deviation of 15, meaning that most people are
+concentrated around the middle of the bell curve. We know that about
+99.7% of the population lie within 3 standard deviations of the mean
+and scores beyond that are very rare. How rare are these higher scores?
+
+Using *Monte Carlo simulation*, we can approximate the number of people
+who have an IQ that is greater than or equal to a specified IQ score. We
+can then compare this result with the result based on the expected
+probability to judge the accuracy of the simulation.
+
+
+Monte Carlo Simulation
+========================================================
+
+To simulate the distribution of IQ scores, we draw
+random samples from a normal distribution and simply count the
+number that are greater than or equal to the specified score. For
+a large enough sample, this should give us a reasonable approximation.
+
+We can run the following R code to give the expected number based on
+the probability.
+```{r}
+expected <- pnorm(187, mean=100, sd=15, lower=F) * 1000000000
+```
+(Spoiler Alert - we can expect `r expected`
+people in a billion to have an IQ of 187 or higher.)
+
+
+Try It!!!
+=========
+left: 30%
+![image3](Sheldon_Cooper-time-machine.jpg)
+
+***
+To run the simulation,
+follow this [link](https://icgordon.shinyapps.io/DataProducts) and enter
+the values for IQ, sample size, and the number of runs.
+
+As we are dealing with random numbers, you can increase the number
+of runs to try to improve the accuracy of the estimate.
+
+Beware, though. The larger the samples and the more runs, the
+longer the simulation will take. Try it out. If you get a result of zero,
+run again or increase the sample size and see what happens.
